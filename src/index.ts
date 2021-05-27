@@ -44,6 +44,7 @@ users.map(({name, email, document, age}) => {
   )
 });
 
+// Rota principal
 app.get("/", (req: express.Request, res: express.Response) => {
   res.send(`
   <body style='margin:0;padding:0'>
