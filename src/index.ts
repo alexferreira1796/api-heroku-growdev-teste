@@ -44,6 +44,15 @@ users.map(({name, email, document, age}) => {
   )
 });
 
+app.get("/", (req: express.Request, res: express.Response) => {
+  res.send(`
+  <body style='margin:0;padding:0'>
+      <div style='display: flex;justify-content: center;align-items: center; align-content: center;width:99vw;height:99vh'>
+        <h1 style='font-size:60px;font-weigth:600'>🚀 API - Transações</h1>
+      </div>
+  </body>
+  `);
+});
 // Lista todos os usuários
 app.get("/users", (req: Request, res: Response) => {
   return res.status(200).json({
